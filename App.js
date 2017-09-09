@@ -33,15 +33,29 @@ const Cards = [
   {
     name: '1',
     image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/yichen.jpg',
-    
+    organization: '',
+    mentoredCount: 0,
+    mentorLookingFor: '',
+    menteeLookingFor: '',
+    mentorRating: 0,
   },
   {
     name: '2',
-    image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/chris.png'
+    image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/chris.png',
+    organization: 'AutoZone Digital IT',
+    mentoredCount: 0,
+    mentorLookingFor: '',
+    menteeLookingFor: '',
+    mentorRating: 0,
   },
   {
     name: '3',
-    image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/kevin.jpg'
+    image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/kevin.jpg',
+    organization: '',
+    mentoredCount: 0,
+    mentorLookingFor: '',
+    menteeLookingFor: '',
+    mentorRating: 0,
   },
 ]
 
@@ -60,23 +74,12 @@ export default React.createClass({
   },
   cardRemoved (index) {
     console.log(`The index is ${index}`);
-
-    let CARD_REFRESH_LIMIT = 3
-
-    if (this.state.cards.length - index <= CARD_REFRESH_LIMIT + 1) {
-      console.log(`There are only ${this.state.cards.length - index - 1} cards left.`);
-        this.setState({
-          cards: this.state.cards.concat(Cards),
-          outOfCards: true
-        })
-    }
-
   },
   render() {
     return (
       <SwipeCards
         cards={this.state.cards}
-        loop={false}
+        loop={true}
 
         smoothTransition={true}
 
@@ -101,11 +104,13 @@ const styles = StyleSheet.create({
     borderColor: 'grey',
     backgroundColor: 'white',
     borderWidth: 1,
+    padding: 50,
     elevation: 1,
   },
   thumbnail: {
     width: 300,
     height: 300,
+    borderRadius: 150,
   },
   text: {
     fontSize: 20,
