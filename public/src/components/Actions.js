@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Image, Button, TouchableHighlight} from 'react-native';
 
-import styles from './css/card.js'
+import styles from '../style/card.js'
 
 class Actions extends React.Component {
   handleUndo() {
@@ -28,13 +28,13 @@ class Actions extends React.Component {
           />
         </View>
         <TouchableHighlight style={styles.actionImageButton} onPress={this.handleClose}>
-          <Image source={require('./img/close-icon.png')}  />
+          <Image source={require('../img/close-icon.png')}  />
         </TouchableHighlight>
         <TouchableHighlight style={styles.actionImageButton} onPress={this.handleLike}>
-          <Image source={require('./img/like-icon.png')}  />
+          <Image source={require('../img/like-icon.png')}  />
         </TouchableHighlight>
         <TouchableHighlight style={styles.actionImageButton} onPress={this.handleHamburger}>
-          <Image source={require('./img/hamburger.png')}  />
+          <Image source={require('../img/hamburger.png')}  />
         </TouchableHighlight>
       </View>
     )
