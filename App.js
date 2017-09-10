@@ -55,9 +55,6 @@ export default React.createClass({
       outOfCards: false
     }
   },
-  handleUndo (card) {
-    console.log("undo")
-  },
   handleYup (card) {
     console.log("yup")
   },
@@ -69,29 +66,31 @@ export default React.createClass({
   },
   render() {
     return (
-      <SwipeCards
-        cards={this.state.cards}
-        loop={true}
-
-        smoothTransition={true}
-
-        renderCard={(cardData) => <Card {...cardData} />}
-        renderNoMoreCards={() => <NoMoreCards />}
-        showYup={true}
-        showNope={true}
-        handleUndo={this.handleUndo}
-        handleYup={this.handleYup}
-        handleNope={this.handleNope}
-        cardRemoved={this.cardRemoved}
-      />
+        <SwipeCards
+          cards={this.state.cards}
+          loop={true}
+          smoothTransition={true}
+          renderCard={(cardData) => <Card {...cardData} />}
+          renderNoMoreCards={() => <NoMoreCards />}
+          showYup={true}
+          showNope={true}
+          handleYup={this.handleYup}
+          handleNope={this.handleNope}
+          cardRemoved={this.cardRemoved}
+          onClickHandler={null}
+        />
     )
   }
 })
 class Card extends React.Component {
+  handleUndo() {
+    console.log("Undo")
+  }
   render() {
     var mentoredText = this.props.mentoredCount && 'Mentored '
       + this.props.mentoredCount
       + (this.props.mentoredCount > 1 ? ' people' : ' person');
+
     return (
       <View style={styles.card}>
         <View style={styles.hero}>
@@ -142,7 +141,8 @@ const styles = StyleSheet.create({
   actions: {
     backgroundColor: '#e3da74',
     alignSelf: 'stretch',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    padding: 50,
     flexDirection: 'row',
     flex: 1,
   },
