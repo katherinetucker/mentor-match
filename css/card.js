@@ -17,26 +17,19 @@ export default StyleSheet.create({
   },
   actionImageButton: {
     padding: 10,
+    height: 90,
   },
   actionButton: {
     padding: 10,
     marginTop: 5,
   },
-  actions: {
-    position: 'absolute',
-    height: 90,
-    left: 0,
-    top: height - 90,
-    width: width,
+  profile: {
+    flex: 1,
+    flexDirection: 'column',
 
-    backgroundColor: '#e3da74',
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    padding: 10,
-    flexDirection: 'row',
   },
   card: {
-    flex: 1,
+    flex: 3,
     width: width,
     alignSelf: 'stretch',
     alignItems: 'center',
@@ -46,6 +39,14 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     borderWidth: 1,
     elevation: 1,
+  },
+  actions: {
+    flex: 1,
+    backgroundColor: '#e3da74',
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    padding: 10,
+    flexDirection: 'row',
   },
   thumbnail: {
     alignSelf: 'center',
