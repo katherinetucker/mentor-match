@@ -1,21 +1,13 @@
 'use strict';
 
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Image} from 'react-native';
 import Card from './Card.js'
+import NoCards from './NoCards.js'
+import Actions from './Actions.js'
 import Cards from './data/cards.json'
 import SwipeCards from 'react-native-swipe-cards';
 import styles from './css/card.js'
-
-let NoMoreCards = React.createClass({
-  render() {
-    return (
-      <View style={styles.noMoreCards}>
-        <Text>No more cards</Text>
-      </View>
-    )
-  }
-})
 
 export default React.createClass({
   getInitialState() {
@@ -24,31 +16,26 @@ export default React.createClass({
       outOfCards: false
     }
   },
-  handleYup (card) {
+  handleYup(card) {
     console.log("yup")
   },
-  handleNope (card) {
+  handleNope(card) {
     console.log("nope")
   },
-  cardRemoved (index) {
+  cardRemoved(index) {
     console.log(`The index is ${index}`);
   },
   render() {
     return (
-        <SwipeCards
-          cards={this.state.cards}
-          loop={true}
-          smoothTransition={true}
-          renderCard={(cardData) => <Card {...cardData} />}
-          renderNoMoreCards={() => <NoMoreCards />}
-          showYup={true}
-          showNope={true}
-          handleYup={this.handleYup}
-          handleNope={this.handleNope}
-          cardRemoved={this.cardRemoved}
-          onClickHandler={null}
-        />
+      <View>
+        <Text>No more cards</Text>
+        <View style={styles.profileData}>
+          <Image source={require('./img/close-icon.png')}  />
+          <Image source={require('./img/like-icon.png')}  />
+          <Image source={require('./img/hamburger.png')}  />
+        </View>
+        <Actions/>
+      </View>
     )
   }
 })
-

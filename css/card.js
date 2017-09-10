@@ -1,6 +1,7 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
 const width = Dimensions.get('window').width; //full width
+const height = Dimensions.get('window').height; //full height
 
 export default StyleSheet.create({
   hero: {
@@ -15,15 +16,27 @@ export default StyleSheet.create({
   },
   profileData: {
     backgroundColor: '#66b34e',
-    flex: 3,
+
+  },
+  actionImageButton: {
+    padding: 10,
+  },
+  actionButton: {
+    padding: 10,
+    marginTop: 5,
   },
   actions: {
+    position: 'absolute',
+    height: 90,
+    left: 0,
+    top: height - 90,
+    width: width,
+
     backgroundColor: '#e3da74',
     alignSelf: 'stretch',
     justifyContent: 'center',
-    padding: 50,
+    padding: 10,
     flexDirection: 'row',
-    flex: 1,
   },
   card: {
     flex: 1,
