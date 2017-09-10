@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {StyleSheet, Text, View, Image, Dimensions, Button} from 'react-native';
-
+import Cards from './data/cards.json'
 import SwipeCards from 'react-native-swipe-cards';
 
 var width = Dimensions.get('window').width; //full width
@@ -17,36 +17,6 @@ let NoMoreCards = React.createClass({
     )
   }
 })
-
-const Cards = [
-  {
-    name: '1',
-    image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/yichen.jpg',
-    organization: 'AutoZone Digital IT',
-    mentoredCount: 2,
-    mentorLookingFor: 'I am passionate about helping people stay driven in their career growth. I want to be that sounding board for people and work through tough situations together.  Learning is bi-directional, and I think I can learn just as much being a mentor as being a mentee. ',
-    menteeLookingFor: '',
-    mentorRating: 5,
-  },
-  {
-    name: '2',
-    image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/chris.png',
-    organization: 'AutoZone Digital IT',
-    mentoredCount: 30,
-    mentorLookingFor: 'Leadership and talent development',
-    menteeLookingFor: '',
-    mentorRating: 2,
-  },
-  {
-    name: '3',
-    image: 'https://raw.githubusercontent.com/cjlyth/mentor-match/master/img/kevin.jpg',
-    organization: 'AutoZone Infosec',
-    mentoredCount: 0,
-    mentorLookingFor: 'Career/Technical',
-    menteeLookingFor: 'Leadership',
-    mentorRating: 5,
-  },
-]
 
 export default React.createClass({
   getInitialState() {
