@@ -4,6 +4,7 @@ import React from 'react';
 import {Text, View, Image} from 'react-native';
 import Card from './Card.js'
 import NoCards from './NoCards.js'
+import Hero from './Hero.js'
 import Actions from './Actions.js'
 import Cards from './data/cards.json'
 import SwipeCards from 'react-native-swipe-cards';
@@ -28,11 +29,20 @@ export default React.createClass({
   render() {
     return (
       <View>
-        <Text>No more cards</Text>
-        <View style={styles.profileData}>
-          <Image source={require('./img/close-icon.png')}  />
-          <Image source={require('./img/like-icon.png')}  />
-          <Image source={require('./img/hamburger.png')}  />
+        <View>
+          <SwipeCards
+            cards={this.state.cards}
+            loop={true}
+            smoothTransition={true}
+            renderCard={(cardData) => <Card {...cardData} />}
+            renderNoMoreCards={() => <NoMoreCards />}
+            showYup={true}
+            showNope={true}
+            handleYup={this.handleYup}
+            handleNope={this.handleNope}
+            cardRemoved={this.cardRemoved}
+            onClickHandler={null}
+            />
         </View>
         <Actions/>
       </View>

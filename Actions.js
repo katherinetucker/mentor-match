@@ -5,16 +5,16 @@ import styles from './css/card.js'
 
 class Actions extends React.Component {
   handleUndo() {
-    console.log("Undo")
+    console.log("Undo..")
   }
   handleClose() {
-    console.log("Close")
+    console.log("Close..")
   }
   handleLike() {
-    console.log("Like")
+    console.log("Like..")
   }
   handleHamburger() {
-    console.log("Hamburger")
+    console.log("Hamburger..")
   }
   render() {
     return (

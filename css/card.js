@@ -7,8 +7,6 @@ export default StyleSheet.create({
   hero: {
     paddingTop: 50,
     backgroundColor: '#66b34e',
-    flexDirection: 'row',
-    flex: 3,
   },
   lookingFor: {
     backgroundColor: '#e3da74',
@@ -16,7 +14,6 @@ export default StyleSheet.create({
   },
   profileData: {
     backgroundColor: '#66b34e',
-
   },
   actionImageButton: {
     padding: 10,
