@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Image, Button, TouchableHighlight} from 'react-native';
 
-import styles from './css/card.js'
+import styles from '../style/card.js'
 
 class Hero extends React.Component {
 

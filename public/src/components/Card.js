@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, Image, Dimensions} from 'react-native';
 
-import styles from './css/card.js'
+import styles from '../style/card.js'
 
 class Card extends React.Component {
 

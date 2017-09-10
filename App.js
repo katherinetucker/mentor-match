@@ -1,14 +1,12 @@
 'use strict';
 
 import React from 'react';
-import {Text, View, Image} from 'react-native';
-import Card from './Card.js'
-import NoCards from './NoCards.js'
-import Hero from './Hero.js'
-import Actions from './Actions.js'
-import Cards from './data/cards.json'
+import {View} from 'react-native';
+import Card from './public/src/components/Card.js'
+import Actions from './public/src/components/Actions.js'
+import Cards from './public/src/data/cards.json'
 import SwipeCards from 'react-native-swipe-cards';
-import styles from './css/card.js'
+import styles from './public/src/style/card.js'
 
 export default React.createClass({
   getInitialState() {
