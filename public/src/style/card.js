@@ -31,11 +31,18 @@ export default StyleSheet.create({
     padding: 10,
     flexDirection: 'row',
   },
+  hero: {
+    paddingTop: 50,
+    backgroundColor: '#66b34e',
+  },
   thumbnail: {
     alignSelf: 'center',
     width: 200,
     height: 200,
     borderRadius: 100,
+    borderColor: '#66b34e',
+    borderWidth: 10,
+    marginTop: -10,
   },
   text: {
     fontSize: 20,
@@ -48,10 +55,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  hero: {
-    paddingTop: 50,
-    backgroundColor: '#66b34e',
-  },
+
   lookingFor: {
     backgroundColor: '#e3da74',
     //flex: 1,
