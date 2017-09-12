@@ -7,9 +7,20 @@ export default StyleSheet.create({
   baseText: {
     fontFamily: 'Cochin',
   },
-
+  profileHeader: {
+    height: 100,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+  },
+  profileHeaderImage: {
+    transform:([{ scale:.8}])
+  },
   profile: {
     flex: 1,
+    paddingHorizontal: 20,
+    paddingTop: 50,
     backgroundColor: 'tomato',
   },
   card: {
